@@ -10,11 +10,20 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'Apache 2.0' }
   s.source           = { :git => "https://github.com/sergiog90/NYTPhotoViewer.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.resources = 'Pod/Assets/**/*'
+  s.subspec 'Core' do |ss|
+    ss.ios.resource_bundle = { s.name => ['NYTPhotoViewer/NYTPhotoViewer.bundle/*'] }
+    ss.source_files = 'NYTPhotoViewer/**/*.{h,m,swift}'
+    ss.frameworks = 'UIKit', 'Foundation'
+  end
 
-  s.frameworks = 'UIKit', 'Foundation'
+  s.subspec 'AnimatedGifSupport' do |ss|
+    ss.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'ANIMATED_GIF_SUPPORT=1'}
+
+    ss.dependency 'NYTPhotoViewer/Core'
+    ss.dependency 'FLAnimatedImage', '~> 1.0.12'
+  end
+
 end
