@@ -1,9 +1,15 @@
-# NYTPhotoViewer
+# NYTPhotoViewer+LifeCycle
 
 [![Platform](http://cocoapod-badges.herokuapp.com/p/NYTPhotoViewer/badge.png)](http://cocoadocs.org/docsets/NYTPhotoViewer)
 [![Version](http://cocoapod-badges.herokuapp.com/v/NYTPhotoViewer/badge.png)](http://cocoadocs.org/docsets/NYTPhotoViewer)
 
+<<<<<<< HEAD
 NYTPhotoViewer is a slideshow and image viewer that includes double-tap to zoom, captions, support for multiple images, interactive flick to dismiss, animated zooming presentation, and more.
+=======
+With LifeCycle delegation you can change your view acord to the gallery state. If you push from a UINavigationController you can hide statusBar to prevent overlap with close and share buttons.
+
+## Demo
+>>>>>>> develop
 
 ![Demo GIF](Images/photo_viewer.gif)
 
@@ -20,6 +26,7 @@ NYTPhotosViewController *photosViewController = [[NYTPhotosViewController alloc]
 
 ### Carthage
 
+<<<<<<< HEAD
 NYTPhotoViewer may be installed via [Carthage](https://github.com/Carthage/Carthage). To install it, simply add the following line to your `Cartfile`:
 
 ```
@@ -37,6 +44,9 @@ NYTPhotoViewer is available through [CocoaPods](http://cocoapods.org). To instal
 ```
 pod 'NYTPhotoViewer', '~> 1.1.0'
 ```
+=======
+    pod 'NYTPhotoViewer+LifeCycle'
+>>>>>>> develop
 
 ## Requirements
 
